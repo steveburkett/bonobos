@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'jquery-rails'
+gem 'popper_js', '~> 1.11', '>= 1.11.1'
 gem 'bootstrap', '~> 4.0.0.beta'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

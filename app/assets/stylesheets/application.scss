@@ -1,3 +1,10 @@
 @import "bootstrap";
 @import "products";
 @import "scaffolds";
+
+.myCollapse {
+  display: none;
+}
+.myCollapse.in {
+  display: block;
+}

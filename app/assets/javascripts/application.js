@@ -11,6 +11,23 @@
 // about supported directives.
 //
 //= require jquery
-//= require rails-ujs
+//= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require popper
+//= require bootstrap
+
+$(document).ready(function() {
+    $("[data-toggle='myCollapse']").click(function( ev ) {
+        ev.preventDefault();
+        var target;
+        if (this.hasAttribute('data-target')) {
+            target = $(this.getAttribute('data-target'));
+        } else {
+            target = $(this.getAttribute('href'));
+        };
+        target.toggleClass("in");
+        console.log(target.hasClass('in'));
+    });
+});
+

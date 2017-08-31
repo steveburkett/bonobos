@@ -16,16 +16,7 @@
 
   <tbody>
     <% @inventories.each do |inventory| %>
-      <tr>
-        <td><%=  link_to "#{inventory.product_id}", product_path(inventory.product_id) %></td>
-        <td><%= inventory.waist %></td>
-        <td><%= inventory.length %></td>
-        <td><%= inventory.style %></td>
-        <td><%= inventory.count %></td>
-        <td><%= link_to 'Show', inventory %></td>
-        <td><%= link_to 'Edit', edit_inventory_path(inventory) %></td>
-        <td><%= link_to 'Destroy', inventory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+     <%= render inventory %>
     <% end %>
   </tbody>
 </table>
